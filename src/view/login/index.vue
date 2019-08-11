@@ -1,10 +1,12 @@
 <template>
-  <v-layout column primary>
-    <v-flex align-self-center display-1 mb-5 mt-12 pt-12 shrink white--text>
-      Picture Collection Admin Zone
+  <v-layout class="panel" column primary>
+    <v-img class="bg" src="./bg.svg" />
+
+    <v-flex align-self-center mt-12 pt-12 shrink style="width:750px">
+      <font-board duration="4" stroke-width="2" text="画集管理平台" />
     </v-flex>
 
-    <v-flex white shrink py-5>
+    <v-flex white shrink py-5 elevation-9>
       <v-card width="500" class="mx-auto" flat>
         <v-card-text>
           <v-text-field color="accent" label="Account" outlined />
@@ -19,9 +21,26 @@
 </template>
 
 <script lang="ts">
+import FontBoard from "@/component/FontBoard.vue";
 import { Component, Vue } from "vue-property-decorator";
 import { State } from "vuex-class";
 
-@Component
+@Component({
+  components: {
+    FontBoard
+  }
+})
 export default class Login extends Vue {}
 </script>
+
+<style lang="scss" scoped>
+.panel {
+  z-index: 0;
+}
+
+.bg {
+  @include size(100%);
+  position: absolute;
+  z-index: -1;
+}
+</style>
