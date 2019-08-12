@@ -1,6 +1,6 @@
 <template>
-  <v-layout class="panel" column primary>
-    <v-img class="bg" src="./bg.svg" />
+  <v-layout class="panel" column>
+    <background class="bg" />
 
     <v-flex align-self-center mt-12 pt-12 shrink style="width:750px">
       <font-board duration="4" stroke-width="2" text="画集管理平台" />
@@ -21,12 +21,14 @@
 </template>
 
 <script lang="ts">
+import Background from "./component/Background.vue";
 import FontBoard from "@/component/FontBoard.vue";
 import { Component, Vue } from "vue-property-decorator";
 import { State } from "vuex-class";
 
 @Component({
   components: {
+    Background,
     FontBoard
   }
 })
@@ -39,7 +41,6 @@ export default class Login extends Vue {}
 }
 
 .bg {
-  @include size(100%);
   position: absolute;
   z-index: -1;
 }
