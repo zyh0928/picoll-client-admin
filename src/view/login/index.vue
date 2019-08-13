@@ -3,7 +3,7 @@
     <background class="bg" />
 
     <v-flex align-self-center mt-12 pt-12 shrink style="width:750px">
-      <font-board duration="4" stroke-width="2" text="画集管理平台" />
+      <font-board :text="$t('common.title')" duration="4" stroke-width="2" />
     </v-flex>
 
     <v-flex white shrink py-5 elevation-9>
@@ -13,7 +13,7 @@
 
           <v-text-field color="accent" label="Password" outlined />
 
-          <v-btn color="accent" block>Sign in</v-btn>
+          <v-btn @click="signIn" color="accent" block>Sign in</v-btn>
         </v-card-text>
       </v-card>
     </v-flex>
@@ -32,7 +32,11 @@ import { State } from "vuex-class";
     FontBoard
   }
 })
-export default class Login extends Vue {}
+export default class Login extends Vue {
+  async signIn() {
+    this.$i18n.locale = this.$i18n.locale === "en" ? "zh-Hans" : "en";
+  }
+}
 </script>
 
 <style lang="scss" scoped>

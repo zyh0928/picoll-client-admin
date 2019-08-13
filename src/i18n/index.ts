@@ -9,8 +9,8 @@ import zhHansValidation from "./zh-Hans/validation";
 Vue.use(VueI18n);
 
 const i18n = new VueI18n({
-  fallbackLocale: "zh-Hans",
   locale: "zh-Hans",
+  fallbackLocale: "zh-Hans",
   // silentTranslationWarn: !0,
   messages: {
     "zh-Hans": zhHans,
