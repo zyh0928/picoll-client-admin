@@ -15,11 +15,11 @@ module.exports = {
 
   configureWebpack: {
     devtool: "source-map"
-    //   plugins: [
-    //     new webpack.ProvidePlugin({
-    //       axios: "axios"
-    //     })
-    //   ]
+    // plugins: [
+    //   new webpack.ProvidePlugin({
+    //     axios: "axios"
+    //   })
+    // ]
   },
 
   css: {

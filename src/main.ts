@@ -5,7 +5,7 @@ import router from "./routes";
 import store from "./store";
 import vuetify from "./plugin/vuetify";
 
-Vue.config.productionTip = !1;
+// Vue.config.productionTip = !1;
 
 new Vue({
   i18n,
