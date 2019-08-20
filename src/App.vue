@@ -19,14 +19,14 @@
 </template>
 
 <script lang="ts">
-import MyHeader from "@/component/MyHeader.vue";
-import MySidebar from "@/component/MySidebar.vue";
+import PicollHeader from "@/component/PicollHeader.vue";
+import PicollSidebar from "@/component/PicollSidebar.vue";
 import { Component, Vue } from "vue-property-decorator";
 
 @Component({
   components: {
-    MyHeader,
-    MySidebar
+    PicollHeader,
+    PicollSidebar
   }
 })
 export default class App extends Vue {}

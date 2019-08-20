@@ -17,22 +17,22 @@
       {{ text }}
       <animate
         :dur="duration"
+        :values="`0 ${length};${length} ${length};0 ${length}`"
         attributeName="stroke-dasharray"
         begin="0"
         calcMode="spline"
         keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
         keyTimes="0;0.5;1"
         repeatCount="indefinite"
-        :values="`0 ${length};${length} ${length};0 ${length}`"
       />
       <animate
         :dur="duration"
+        :values="`0;0;-${length}`"
         attributeName="stroke-dashoffset"
         begin="0"
         calcMode="linear"
         keyTimes="0;0.5;1"
         repeatCount="indefinite"
-        :values="`0;0;-${length}`"
       />
     </text>
   </svg>
@@ -43,19 +43,19 @@ import { Component, Vue, Prop } from "vue-property-decorator";
 
 @Component
 export default class FontBoard extends Vue {
-  fontSize = 100;
+  readonly fontSize = 100;
 
   @Prop({ type: String, default: "#ffffff" })
-  strokeColor!: string;
+  readonly strokeColor!: string;
 
   @Prop({ type: [String, Number], default: 1 })
-  strokeWidth!: string | number;
+  readonly strokeWidth!: string | number;
 
   @Prop({ type: String, default: "" })
-  text!: string;
+  readonly text!: string;
 
   @Prop({ type: [String, Number], default: 2 })
-  duration!: string | number;
+  readonly duration!: string | number;
 
   get viewWidth() {
     let width = 0;

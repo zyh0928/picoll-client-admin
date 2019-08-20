@@ -41,7 +41,7 @@ import { Global } from "typings";
 import { State } from "vuex-class";
 
 @Component
-export default class MyHeader extends Vue {
+export default class PicollHeader extends Vue {
   @State
   readonly page!: string;
 

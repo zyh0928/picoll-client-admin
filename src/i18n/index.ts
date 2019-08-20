@@ -23,9 +23,11 @@ Vue.use(VeeValidate, {
   i18nRootKey: "validations",
   dictionary: {
     "zh-Hans": {
+      attributes: zhHans.model,
       messages: zhHansValidation
     },
     en: {
+      attributes: en.model,
       messages: enValidation
     }
   }

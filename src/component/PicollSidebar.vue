@@ -13,7 +13,7 @@ import { Global } from "typings";
     SidebarMenu
   }
 })
-export default class MySidebar extends Vue {
+export default class PicollSidebar extends Vue {
   readonly menus: Global.Menu[] = [
     {
       id: 1,
