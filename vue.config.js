@@ -6,9 +6,12 @@ module.exports = {
     port: 9029,
     proxy: {
       "/api": {
-        target: "http://gank.io/",
+        target: "http://localhost:9028/admin",
         changeOrigin: !0,
-        ws: !0
+        ws: !0,
+        pathRewrite: {
+          "^/api": ""
+        }
       }
     }
   },

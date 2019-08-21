@@ -1,3 +1,8 @@
+export interface Util {
+  sendRequest: Function;
+  sleep: Function;
+}
+
 export interface Language {
   code: string;
   label: string;
